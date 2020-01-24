@@ -4,46 +4,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../public/style/main.css">
-    <title> <%= title %> </title>
+    <link rel="stylesheet" href="/style/main.css">
+    <!--Para importar o css não é necessario a indentificação da pasta public-->
+    <title> Curriculo </title>
 </head>
 <body>
 
     <main>
-        <h1><%= title %></h1>
-        <p>Bem vindo(a) ao <strong><%= title %></strong></p>
-        <strong><%= name %></strong>
-        <p><%= profession %></p>
-        <p><%= description %></p>
-        <ul>
-        <% experience.map(experience => { %>
-            <li>
-                <div>
-                    <strong><%= experience.company %>:</strong>
-                    <strong><%= experience.office %></strong>
-                    <br>
-                    <span><%= experience.description %></span>
+        <section class="section-1">
+
+            <article class="identity">
+
+                <p><%= name %> <span class="marcado"><%= surname %></span></p>
+    
+            </article>
+
+        </section>
+        <!--=========================-->
+        <section class="section-2">
+
+            <article class="contact">
+                <div class="bloco-contact">
+                    <p class="titulo">PERFIL</p>
+                    <hr>
+                    <p>Brasileiro</p>
+                    <p>20 Anos</p>
+                    <!--Esquema de idade sendo alterada automaticamnte com Date-->
                 </div>
-            </li>
-        <% }); %>
-        </ul>
-        <ul>
-        <% education.map(education => { %>
-            <li>
-                <div>
-                    <strong><%= education.institution %></strong>
-                    <br>
-                    <span><%= education.description %></span>
+    
+                <div class="bloco-contact">
+                    <p class="titulo">OBJETIVO</p>
+                    <hr>
+                    <p>Desejo atuar no ramo da programação</p>
                 </div>
-            </li>
-        <% }); %>
-        </ul>
-        <ul>
-        <% skills.map(skill => { %>
-            <li><%= skill %></li>
-        <% }); %>
-        </ul>
+    
+                <div class="bloco-contact">
+                    <hr>
+                    <p class="titulo">ENDEREÇO</p>
+                    <p>Cidade Nova Heliópolis</p>
+                    <p>Sacomã, São Paulo / SP</p>
+                </div>
+    
+                <div class="bloco-contact">
+                    <hr>
+                    <p class="titulo">TELEFONE</p>
+                    <p>+55 (11) xxxxx-xxxx</p>
+                </div>
+    
+                <div class="bloco-contact">
+                    <hr>
+                    <p class="titulo">E-MAIL</p>
+                    <p>
+                        w_dwf@hotmail.com
+                    </p>
+                </div>
+    
+                <div class="bloco-contact">
+                    <hr>
+                    <p class="titulo">GitHub</p>
+                    <p>
+                        https://github.com/wdwf
+                    </p>
+                </div>
+                
+            </article>
+    
+            <!--=========================-->
+    
+            <article class="features">
+                <div class="bloco-features">
+                    <p class="titulo">FORMAÇÃO ACADÊMICA</p>
+                    <hr>
+                    <p><%= schoolDescription %></p>
+                    <p><%= school %></p>
+                </div>
+
+                <div class="bloco-features">
+                    <p class="titulo">CURSOS COMPLEMENTARES</p>
+                    <hr>
+                    <ul>
+                    <% experience.map(experience => { %>
+                        <li> 
+                            <p><%= experience.institution %></p>
+                            <p><%= experience.description %></p> 
+                        </li>
+                    <% }); %>
+                    </ul>
+                    <!--
+                        A função posta no map é a de criar a estrutura html delimitada com os elementos
+                        (dados) dentro dessa estrutura.
+                    -->
+                </div>
+
+                <div class="bloco-features">
+                    <p class="titulo">HISTORICO PROFISSIONAL</p>
+                    <hr>
+                    <ul>
+                    <% worksDone.map(worksDone => { %>
+                        <li>
+                            <div>
+                                <p><%= worksDone.company %></p>
+                                <p><%= worksDone.description %></p>
+                            </div>
+                        </li>
+                    <% }); %>
+                    </ul>
+                </div>
+                <div class="bloco-features">
+                    <p class="titulo">HABILIDADES</p>
+                    <hr>
+                    <ul>
+                    <% skills.map(skill => { %>
+                        <li><%= skill %></li>
+                        <br>
+                    <% }); %>
+                    </ul>
+                </div>
+            </article>
+            
+        </section>
+
     </main>
+
+    <!--=========================-->
+
+    <footer>
+        <p>Criado por: <%= name %> <%= surname %>.</p>
+        <p>Designer por: <%= name %> <%= surname %>.</p>
+    </footer>
 
 </body>
 </html>

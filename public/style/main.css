@@ -1,9 +1,130 @@
-body {
-    font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
-    line-height: 2;
+/*RESET*/
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    background: rgb(248, 248, 248);
+}
+/*=====================*/
+/*1° SESSÃO*/
+.section-1{
+    width: 100%;
+
+    /*
+    Especifica o alinhamento padrão para itens do conteiner flexivel
+    --Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens.
+    */
+    display: flex;
+
+    /*
+    O align-items alinha os flex itens de acordo com o eixo do container.
+    */
+    align-items: stretch;
+
+    /*
+    A overflowpropriedade especifica o que deve acontecer se o conteúdo ultrapassar a caixa de um elemento.
+    
+    //overflow: hidden;
+    */
+
 }
 
-main, footer {
-    max-width: 960px;
-    margin: 0 auto;
+.section-1{
+    width: 100%;
+
+    display: flex;
+    /*
+    Torna o elemnto um flex container automaticamente 
+    transformando todos os seus descedentes diretos em flex 
+    itens.
+    --deixade ter o espaço seguinte
+
+    Valores possiveis: 
+    
+    display:block; --> indentifica os elemntos como blocos
+    display:flex-wrap; --> ao acabar o espaço no bloco ele continua na linha debaixo
+
+    */
+
+    align-items: stretch;
+    /*
+    Alinha todos os elemento de modo a ocupar todo o conteiner/bloco;
+    
+    */
+}
+
+/*=====================*/
+/*2° SESSÃO*/
+.section-2{
+    width: 100%;
+    display: flex;
+}
+
+/*=====================*/
+
+.identity{
+    width: 100%;
+    background: rgb(208, 207, 208);
+    display: flex;
+}
+.identity p{
+    margin: 0 auto 5px auto;
+    font-size: 4em;
+    align-self: flex-end;
+}
+.identity .marcado{
+    padding: 5px;
+    background: rgb(21, 156, 218);
+    font-weight: bold;
+    color: #fff;
+}
+
+/*=====================*/
+
+.contact{
+    width: 30%;
+    background: rgb(66, 64, 70);
+}
+
+/*=====================*/
+
+.features{
+    width: 70%;
+    background: rgb(248, 248, 248); 
+}
+
+/*=====================*/
+/*Estilo geral*/
+
+/*titulos*/
+.titulo{
+    color:rgb(21, 156, 218);
+    font-weight: bold;
+
+}
+
+.bloco-contact{
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #fff;
+    text-align: justify;
+}
+
+.bloco-contact img{
+    width: 20%;
+}
+
+.bloco-features{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/*=====================*/
+
+footer{
+    background: rgb(66, 64, 70);
+    color: #fff;
+    padding: 20px 0 20px 0;
+    text-align: center;
 }

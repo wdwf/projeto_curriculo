@@ -8,24 +8,24 @@ exports.getName = () => {
     return curriculoModel.name;
 }
 
-exports.getTitle = () => {
-    return curriculoModel.title;
+exports.getSurname = () => {
+    return curriculoModel.surname;
 }
 
-exports.getProfession = () => {
-    return curriculoModel.profession;
+exports.getSchool = () => {
+    return curriculoModel.name;
 }
 
-exports.getDescription = () => {
-    return curriculoModel.description;
+exports.getSchoolDescription = () => {
+    return curriculoModel.schoolDescription;
 }
 
 exports.getExperience = () => {
     return curriculoModel.experience;
 }
 
-exports.getEducation = () => {
-    return curriculoModel.education;
+exports.getWorksDone = () => {
+    return curriculoModel.worksDone;
 }
 
 exports.getSkill = () => {
